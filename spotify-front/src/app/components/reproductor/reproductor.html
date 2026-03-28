@@ -1,0 +1,34 @@
+<section class="card bg-black text-light border-0 shadow-lg player-card">
+  <div class="card-body">
+    <h2 class="h6 text-secondary mb-3 player-title">Reproductor</h2>
+
+    <ng-container *ngIf="iframeSrc$ | async as iframeSrc; else audioFallback">
+      <div class="ratio ratio-16x9 player-frame">
+        <iframe
+          [src]="iframeSrc"
+          title="YouTube player"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="small mt-3 mb-0 player-hint">
+        Cambiá de tema en la tabla para reproducir otro video.
+      </p>
+    </ng-container>
+
+    <ng-template #audioFallback>
+      <ng-container *ngIf="audioUrl$ | async as audioUrl; else sinSeleccion">
+        <audio class="w-100 player-audio" controls autoplay [src]="audioUrl"></audio>
+        <p class="small mt-3 mb-0 player-hint">
+          Reproduciendo vista previa desde Deezer.
+        </p>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #sinSeleccion>
+      <p class="small mb-0 player-hint">
+        Seleccioná un tema en la lista para reproducirlo.
+      </p>
+    </ng-template>
+  </div>
+</section>

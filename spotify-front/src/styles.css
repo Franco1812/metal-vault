@@ -1,0 +1,38 @@
+:root {
+  color-scheme: dark;
+  --bg-900: #050607;
+  --bg-800: #0b0f14;
+  --bg-700: #141a22;
+  --panel-700: #151b24;
+  --panel-600: #1b222c;
+  --text-100: #f3f4f6;
+  --text-200: #d1d5db;
+  --text-300: #9aa3af;
+  --accent-500: #f59e0b;
+  --accent-600: #f97316;
+  --accent-700: #ea580c;
+  --mint-500: #22d3ee;
+}
+
+body {
+  background-color: var(--bg-900);
+  color: var(--text-100);
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Bebas Neue', 'Space Grotesk', system-ui, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: inherit;
+}
+
+.text-accent {
+  color: var(--accent-500);
+}

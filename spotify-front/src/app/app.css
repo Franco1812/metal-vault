@@ -1,0 +1,38 @@
+.app-shell {
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.18), transparent 40%),
+    radial-gradient(circle at 20% 10%, rgba(34, 211, 238, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(234, 88, 12, 0.22), transparent 50%),
+    linear-gradient(160deg, #050607 0%, #0b0f14 35%, #0d1219 60%, #050607 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-shell::before,
+.app-shell::after {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.app-shell::before {
+  background: rgba(34, 211, 238, 0.35);
+  top: -260px;
+  right: -200px;
+}
+
+.app-shell::after {
+  background: rgba(245, 158, 11, 0.35);
+  bottom: -280px;
+  left: -200px;
+}
+
+.app-shell > .container {
+  position: relative;
+  z-index: 1;
+}

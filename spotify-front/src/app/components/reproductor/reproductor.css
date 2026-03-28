@@ -1,0 +1,33 @@
+.player-card {
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(20, 26, 34, 0.95), rgba(10, 14, 18, 0.95));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+}
+
+.player-card .card-body {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.player-title {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.player-hint {
+  color: #9aa3af;
+}
+
+.player-frame {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background: rgba(7, 10, 13, 0.9);
+}
+
+.player-audio {
+  background-color: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  padding: 0.35rem;
+}
